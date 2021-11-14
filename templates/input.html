@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Padro Pio XII
+{% endblock %}
+
+{% block body %}
+        <div class="py-1 text-center mb-5">
+        <h3><span class="alpha">{% print('Используйте один из следующих запросов') %}</span></h3>
+            <table class="table table-dark table-hover">
+                <tr>
+                    {% for element in qqq %}
+                    <th> {{ element }} </th>
+                {% endfor %}
+                </tr>
+        </table>
+        </div>
+    <div class="container">
+
+        <form method="post" name="MyFrom" action="/output" class="form-inline">
+            <div class="form-group row">
+                <input class="form-control-lg mb-2 mr-sm-2 " name="data" placeholder="Я ищу.." type="text">
+                <input class="btn btn-secondary" name="submit" type="submit" value="Enter">
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

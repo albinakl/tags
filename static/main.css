@@ -1,0 +1,16 @@
+/*.container{*/
+/*  background-color: black !important;*/
+/*}*/
+
+.color--wild {
+  background-color: #9c258a;
+  color:white;
+}
+
+.alpha {
+  color: #9c258a;
+}
+
+.container {
+   width: 500px;
+}

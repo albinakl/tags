@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Padro Pio XII
+{% endblock %}
+
+{% block body %}
+    <div class="py-1 text-center mb-5">
+        <h3><span class="alpha">{% print(request) %}</span></h3>
+            <table class="table table-dark table-hover">
+            <tr>
+{#            {% for id, element in tags.keys() %}#}
+{#                <th> {{ [id] + element }} </th>#}
+{#            {% endfor %}#}
+            {% for key, value in tags.items() %}
+
+            <tr>
+                <th> {{ key }} </th>
+                {% for el in value %}
+               <td> {{ el }} </td>
+                    {% endfor %}
+            </tr>
+
+            {% endfor %}
+            </tr>
+            </table>
+    </div>
+{% endblock %}
